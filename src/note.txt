@@ -1,0 +1,79 @@
+Jest Vs RTL 
+-----------
+Jest is a Javascript testing framework
+Jest is a test runner that finds the tests, run the tests determines wheather the tests passed or failed and reports it back in a human redable manner.
+
+RTL
+---
+Javascript testing utility that provides virtual DOM for testing React components
+React Testing Library provides a virtual DOM which we can use to interact with and verify the behavior of a react component
+
+Testing Library is infact a family of packages which helps test UI componets
+
+Types of tests
+
+Unit tests
+Integration tests
+E2E tests
+
+Unit tests
+---------------
+Focus is on testing the individual building blocks of an application such as a class or a function or a component
+Each unit or building block is tested in isolation, independant of other units
+Dependencies are mocked
+Run in a short amount of time and make it very easy to pinpoint failures
+Relatively easier to write and maintain
+
+Integration tests
+--------------------------
+Focus is on testing a combination of units and ensuring they work together
+Take longer than unit tests
+
+E2E tests
+---------------
+Focus is on testing the entire application flow and ensuring it works as designed from start to finish
+Involves in a real UI, a real backend database, real services etc.
+Take longer as they cover the most amount of code
+Have a cost implication as you interact with real APIs that may charge based on the number of requests.
+
+TDD (Test Driven Development)
+----------------------------
+Test driven development is a software development process where you write tests before writing the software code
+Once the tests have been written, you then write the code to ensure the tests passed
+
+1. Create tests that verify the functionality of a specific feature
+2. Write software code that will run the tests successfully when re-executed
+3. Refactor the code for optimization while ensuring the tests continue to pass
+
+Also called red-green testing as well tests go from a red failed state to a green passed state
+
+RTL Philosophy
+------------------------
+"The more your tests resemble the way your software is used, the more confidence they can give you."
+
+With React Testing Library, we are not concered about the implementation details of a component
+Instead we are testing how the component behave when a user interact with it
+RTL will not care if you add 4+4 or 5+3 to display the number 8
+Refactoring will not affect your test as long as the end result is the same
+
+test
+----
+test(name, fn, timout)
+The first argument is the test name used to identify the test
+The second argument is a function that contains the expectations to test
+The third argument is timeout which is an optional argument for specifying how long to wait before 
+aborting the test. The default timeout value is 5 seconds.
+
+describe
+--------
+describe(name, fn)
+The first argument is the group name
+The second argument is a function that contains the expectations to test
+
+Code Coverage
+-------------
+A metric that can help you understand how much of your software code is tested
+    1. Statement coverage: how many of the statements in the software code have been executed
+    2. Branches coverage: how many of the branches of the control stuctures (if statements for instance) have been executed
+    3. Function coverage: how many of the fucntions defined have been called and finally
+    4. Line coverage: how many of lines of source code have been tested.
