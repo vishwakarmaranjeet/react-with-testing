@@ -13,8 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "coverage": "react-scripts test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{js,jsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{js,jsx}'",
-    "prepare": "husky install"
+    "coverage": "react-scripts test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{js,jsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{js,jsx}'"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +47,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "husky": "^8.0.0",
     "init": "^0.1.2",
     "npm": "^9.3.1"
   }
