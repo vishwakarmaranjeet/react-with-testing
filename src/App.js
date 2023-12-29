@@ -1,15 +1,13 @@
 import "./App.css";
 import { Greet } from "./components/greet/greet";
+import InputBox from "./components/Input";
 
 function App() {
-  function methodDoesNotExist(){
-    throw new Error("Button clicked error");
-  }
   return (
     <>
       <Greet name="World" />
+      <InputBox />
       <div className="App">
-      <button onClick={() => methodDoesNotExist()}>Break the world</button>
       </div>
     </>
   );
