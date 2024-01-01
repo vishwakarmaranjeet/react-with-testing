@@ -9,8 +9,13 @@ test("Input component should render", ()=> {
 });
 
 test("Input component should render", ()=> {
-    const { getByPlaceholderText } = render(<InputBox/>);
+    const { getByPlaceholderText, getByText } = render(<InputBox/>);
     const inputElement = getByPlaceholderText("Enter your name");
     fireEvent.change(inputElement, { target: { value: "Test input" }});
     expect(inputElement.value).toBe("Test input");
+    const btnElement = getByText(/click me/i);
+    expect(btnElement).toBeInTheDocument();
+    expect(btnElement).not.toBeDisabled();
+    fireEvent.click(btnElement);
 });
+
